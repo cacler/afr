@@ -1,0 +1,159 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #1da2d8;
+	color: white;
+}
+
+svg {
+	min-width: 72vw;
+	height: 100vh;
+}
+
+.container1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 22px;
+	width: 500px;
+	display: flex;
+}
+
+.container1.inactive {
+	display: none;
+}
+
+.container2 {
+	display: none;
+	flex-direction: column;
+	font-size: 22px;
+	width: 500px;
+	align-items: center;
+}
+
+.container2.active {
+	display: flex;
+}
+
+.country-name {
+	color: #03E8AB;
+	font-weight: bold;
+}
+
+.country {
+	fill: white;
+	stroke:#000000;
+	stroke-width: 0.1;
+	transition: 0.1s;
+	cursor: pointer;
+
+}
+
+.country:hover {
+	fill: #0ACC98;
+	stroke-width: 0.2;
+}
+
+.play-again,
+.confirm-btn,
+.round-input,
+.max-btn {
+	background-color: #4D7EA8;
+	border: 2px solid #2D3142;
+	color: #FFFFFF;
+	border-radius: 3px;
+	transition: 0.25s;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+.confirm-btn,
+.max-btn {
+	width: 40px;
+	height: 30px;
+	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.round-input {
+	width: 40px;
+	height: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 14px;
+}
+
+.play-again {
+	display: none;
+	width: 125px;
+	height: 40px;
+	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.play-again.active {
+	display: block;
+}
+
+.play-again:hover, 
+.play-again:focus,
+.confirm-btn:hover,
+.confirm-btn:focus,
+.max-btn:hover,
+.max-btn:active,
+.round-input:focus {
+	background-color: #2D3142;
+}
+
+.error {
+	color: #EB0707;
+	margin-top: 5px;
+}
+
+@keyframes enlargment {
+	50% {
+		transform: scale(1.25);
+	}
+}
+
+.result {
+	transition: 0.8s;
+}
+
+.result.correct {
+	color: #66CC00;
+	animation-name: enlargment;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.result.incorrect {
+	color: #FC3232;	
+	animation-name: enlargment;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.wrong-country {
+	color: #03E8AB;
+	font-weight: bold;
+}
+
+
+
